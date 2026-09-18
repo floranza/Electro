@@ -5,6 +5,44 @@ brand, the specification and the rating decide the sale. Built on Online Store
 2.0 theme blocks, with no jQuery, no CSS framework and nothing fetched from a
 third-party CDN.
 
+<p align="center">
+  <a href="https://preview.colorlib.com/theme/electro/"><strong>Live preview</strong></a> ·
+  <a href="https://downloads.colorlib.com/theme/electro-shopify-theme.zip"><strong>Download the theme</strong></a> ·
+  <a href="https://colorlib.com/wp/free-best-shopify-themes/"><strong>More free Shopify themes</strong></a>
+</p>
+
+<p align="center">
+  <img alt="Shopify theme check: 0 offenses" src="https://img.shields.io/badge/theme%20check-0%20offenses-success">
+  <img alt="Online Store 2.0" src="https://img.shields.io/badge/Online%20Store-2.0%20theme%20blocks-5A31F4">
+  <img alt="No dependencies" src="https://img.shields.io/badge/dependencies-none-success">
+</p>
+
+<p align="center">
+  <img src=".github/screenshots/hero.jpg" alt="Electro — homepage">
+</p>
+
+## Preview
+
+**[preview.colorlib.com/theme/electro](https://preview.colorlib.com/theme/electro/)**
+
+The preview is a static build of the same design rather than a live storefront.
+It and this theme share `assets/base.css` — literally the same file — so what you
+see there is what the Liquid renders.
+
+| | |
+|---|---|
+| <img src=".github/screenshots/collection-page.jpg" width="420" alt="Shop page with category, brand, finish and price filters"> | <img src=".github/screenshots/product-page.jpg" width="420" alt="Product page with a full specification table"> |
+| **Shop** — filter by category, brand, finish and price | **Product** — with the specification table |
+| <img src=".github/screenshots/cart-drawer.jpg" width="420" alt="Ajax cart drawer over the storefront"> | <img src=".github/screenshots/blog-page.jpg" width="420" alt="Blog listing page"> |
+| **Cart drawer** — ajax, no page reload | **Blog** — plus about, contact and full customer accounts |
+
+<details>
+<summary>The whole homepage, and the mobile layout</summary>
+<br>
+<img src=".github/screenshots/homepage-full.jpg" width="720" alt="Full-length homepage">
+<img src=".github/screenshots/mobile-view.jpg" width="270" alt="Mobile layout">
+</details>
+
 ## What you get
 
 - **Specification table block** — the component an electronics listing lives or
@@ -66,7 +104,7 @@ into a horizontal scroll on a phone.
 [Fashe](https://github.com/ColorlibHQ/Fashe) and ABC Book. Only the theme
 settings differ — colours, type, radius, heading case.
 
-The [Electro HTML template](https://preview.colorlib.com/theme/electro-v2/) is a
+The [Electro HTML template](https://preview.colorlib.com/theme/electro/) is a
 static build of this same design system: its `assets/css/style.css` is a token
 block plus this file copied verbatim, and `build/check-tokens.py` there fails if
 its tokens stop matching `config/settings_data.json`.
