@@ -1,0 +1,30 @@
+<section class="section color-{{ section.settings.color_scheme }} color-scheme">
+  <div class="page-width page-width--reading">
+    {%- if section.settings.show_title -%}
+      <h1 class="h1" style="text-align: center;">{{ page.title | escape }}</h1>
+    {%- endif -%}
+    <div class="rte">{{ page.content }}</div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "t:sections.main-page.settings.show_title.label",
+      "info": "t:sections.main-page.settings.show_title.info",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.main-page.settings.color_scheme.label",
+      "default": "scheme_1"
+    }
+  ]
+}
+{% endschema %}

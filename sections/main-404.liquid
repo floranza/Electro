@@ -1,0 +1,39 @@
+<section class="section color-{{ section.settings.color_scheme }} color-scheme">
+  <div class="page-width" style="text-align: center; padding-block: var(--space-2xl);">
+    {%- if section.settings.show_title -%}
+      <p class="eyebrow">404</p>
+      <h1 class="h1">{{ 'general.404.title' | t }}</h1>
+    {%- endif -%}
+    <p>{{ 'general.404.subtext' | t }}</p>
+    <p style="margin-top: 1.5rem;">
+      <a href="{{ routes.all_products_collection_url }}" class="button">{{ 'general.404.link' | t }}</a>
+    </p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.main-404.name",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "t:sections.main-404.settings.show_title.label",
+      "info": "t:sections.main-404.settings.show_title.info",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.main-404.settings.color_scheme.label",
+      "default": "scheme_1"
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "404"
+    ]
+  }
+}
+{% endschema %}

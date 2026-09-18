@@ -1,0 +1,89 @@
+{%- comment -%}
+  Specification table — the block an electronics listing lives or dies on.
+
+  Rows come from a product metafield rather than block settings, because the
+  values differ per product and a merchant should not have to rebuild the block
+  on every one. Two shapes are accepted:
+
+    metafield type `json`  -> [{"label": "Display", "value": "14in 2.8K OLED"}, …]
+    metafield type `list.single_line_text_field` -> ["Display: 14in 2.8K OLED", …]
+
+  The second is the one a merchant can fill in without touching JSON, so it is
+  worth supporting: everything before the first colon is the label.
+
+  With no metafield set the block renders nothing at all rather than an empty
+  table, so a store that has not filled it in yet does not show a broken shell.
+{%- endcomment -%}
+
+{%- liquid
+  assign source = product.metafields.specs[block.settings.metafield_key]
+  assign rows = source.value
+-%}
+
+{%- if rows != blank -%}
+  <details class="product__accordion" {% if block.settings.open %}open{% endif %} {{ block.shopify_attributes }}>
+    <summary>
+      {{ block.settings.heading | escape }}
+      {% render 'icon', name: 'chevron-down' %}
+    </summary>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <caption class="visually-hidden">
+          {{ 'products.product.spec_table_caption' | t: title: product.title }}
+        </caption>
+        <tbody>
+          {%- for row in rows -%}
+            {%- liquid
+              if row.label
+                assign label = row.label
+                assign value = row.value
+              else
+                assign parts = row | split: ': '
+                assign label = parts | first
+                assign value = row | remove_first: label | remove_first: ': '
+              endif
+            -%}
+            {%- if value != blank -%}
+              <tr>
+                <th scope="row">{{ label | escape }}</th>
+                <td>{{ value | escape }}</td>
+              </tr>
+            {%- endif -%}
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+  </details>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:blocks.specs.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:blocks.specs.settings.heading.label",
+      "default": "Full specification"
+    },
+    {
+      "type": "text",
+      "id": "metafield_key",
+      "label": "t:blocks.specs.settings.metafield_key.label",
+      "info": "t:blocks.specs.settings.metafield_key.info",
+      "default": "table"
+    },
+    {
+      "type": "checkbox",
+      "id": "open",
+      "label": "t:blocks.specs.settings.open.label",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.specs.presets.preset__1.name"
+    }
+  ]
+}
+{% endschema %}

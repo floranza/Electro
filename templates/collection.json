@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "page-header": {
+      "type": "page-header",
+      "settings": {
+        "height": 300,
+        "overlay_opacity": 35,
+        "alignment": "left",
+        "show_breadcrumb": true,
+        "color_scheme": "scheme_2"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_description": true,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "products_per_page": 24,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme_1",
+        "show_title": false
+      }
+    }
+  },
+  "order": [
+    "page-header",
+    "main"
+  ]
+}

@@ -1,0 +1,24 @@
+{%- form 'customer', id: id, class: 'newsletter-form' -%}
+  <input type="hidden" name="contact[tags]" value="newsletter">
+  <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+    <label class="visually-hidden" for="{{ id }}-email">{{ 'newsletter.label' | t }}</label>
+    <input
+      id="{{ id }}-email"
+      type="email"
+      name="contact[email]"
+      value="{{ form.email }}"
+      placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+      autocomplete="email"
+      required
+      style="flex: 1 1 12rem;"
+      {% if form.errors %}aria-invalid="true"{% endif %}
+    >
+    <button type="submit" class="button">{{ 'general.newsletter_form.submit' | t }}</button>
+  </div>
+
+  {%- if form.errors -%}
+    <p class="form__message form__message--error">{{ form.errors.messages.email }}</p>
+  {%- elsif form.posted_successfully? -%}
+    <p class="form__message form__message--success">{{ 'general.newsletter_form.success' | t }}</p>
+  {%- endif -%}
+{%- endform -%}

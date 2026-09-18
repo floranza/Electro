@@ -1,0 +1,247 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "eyebrow": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tested on our own bench</p>",
+            "alignment": "left"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Technology, without the markup",
+            "size": "h0",
+            "alignment": "left"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Listed with the numbers we measured, not the ones printed on the box.</p>",
+            "alignment": "left"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "label": "Shop all products",
+            "style": "solid",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "height": 88,
+        "overlay_opacity": 0,
+        "content_position": "left",
+        "boxed": true,
+        "color_scheme": "scheme_1"
+      }
+    },
+    "tabbed-collections": {
+      "type": "tabbed-collections",
+      "blocks": {
+        "tab-1": {
+          "type": "tab",
+          "settings": {
+            "label": "Laptops"
+          }
+        },
+        "tab-2": {
+          "type": "tab",
+          "settings": {
+            "label": "Audio"
+          }
+        },
+        "tab-3": {
+          "type": "tab",
+          "settings": {
+            "label": "Keyboards & mice"
+          }
+        },
+        "tab-4": {
+          "type": "tab",
+          "settings": {
+            "label": "Desktops & displays"
+          }
+        }
+      },
+      "block_order": [
+        "tab-1",
+        "tab-2",
+        "tab-3",
+        "tab-4"
+      ],
+      "settings": {
+        "heading": "Shop by category",
+        "heading_size": "h2",
+        "description": "<p>The pieces our customers come back for, across every room in the house.</p>",
+        "products_to_show": 4,
+        "columns": 4,
+        "columns_mobile": "2",
+        "show_view_all": true,
+        "view_all_label": "View all",
+        "color_scheme": "scheme_1"
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "We open everything first"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every model we list has been out of its box and on the bench. We measure the things manufacturers round up — real battery life, sustained performance, how hot it gets an hour in.</p><p>When a spec sheet and our bench disagree, the listing says so. That is most of what we are for.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "label": "Shop all products",
+            "style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_ratio": "landscape",
+        "image_position": "left",
+        "vertical_alignment": "center",
+        "color_scheme": "scheme_2"
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Highest rated right now",
+        "heading_size": "h2",
+        "description": "<p>Hand-picked pieces that sit well with what you have been looking at.</p>",
+        "layout": "grid",
+        "products_to_show": 8,
+        "columns": 4,
+        "columns_mobile": "2",
+        "show_view_all": true,
+        "color_scheme": "scheme_1"
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection-4": {
+          "type": "collection",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3",
+        "collection-4"
+      ],
+      "settings": {
+        "heading": "Departments",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "title_position": "on",
+        "columns": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme_1"
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "heading": "Free next-day over $50",
+            "text": "<p>Ordered before 6pm, on your desk tomorrow.</p>"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "heading": "Two year warranty",
+            "text": "<p>On everything we sell, handled by us rather than the manufacturer.</p>"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "heading": "30 day returns",
+            "text": "<p>Unopened or not, if it is not right it goes back.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3"
+      ],
+      "settings": {
+        "heading": "Why buy from us",
+        "alignment": "center",
+        "color_scheme": "scheme_2"
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "settings": {
+        "heading": "From the workshop",
+        "blog": "news",
+        "posts_to_show": 3,
+        "show_excerpt": true,
+        "color_scheme": "scheme_1"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "Join the list",
+        "text": "<p>New pieces, restocks and the occasional workshop story.</p>",
+        "color_scheme": "scheme_4"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "tabbed-collections",
+    "image-with-text",
+    "featured-collection",
+    "collection-list",
+    "multicolumn",
+    "blog-posts",
+    "newsletter"
+  ]
+}

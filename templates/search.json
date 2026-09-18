@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "page-header": {
+      "type": "page-header",
+      "settings": {
+        "height": 260,
+        "overlay_opacity": 35,
+        "alignment": "left",
+        "show_breadcrumb": true,
+        "color_scheme": "scheme_2"
+      }
+    },
+    "main": {
+      "type": "main-search",
+      "settings": {
+        "color_scheme": "scheme_1",
+        "show_title": false
+      }
+    }
+  },
+  "order": [
+    "page-header",
+    "main"
+  ]
+}

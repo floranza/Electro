@@ -1,0 +1,33 @@
+{
+  "sections": {
+    "page-header": {
+      "type": "page-header",
+      "settings": {
+        "height": 300,
+        "overlay_opacity": 35,
+        "alignment": "left",
+        "show_breadcrumb": true,
+        "color_scheme": "scheme_2"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "color_scheme": "scheme_1",
+        "show_title": false
+      }
+    },
+    "contact": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Contact us",
+        "color_scheme": "scheme_1"
+      }
+    }
+  },
+  "order": [
+    "page-header",
+    "main",
+    "contact"
+  ]
+}
